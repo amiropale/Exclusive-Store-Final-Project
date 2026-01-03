@@ -32,11 +32,14 @@ A modern, responsive e-commerce web application developed as a final project for
 │   ├── cart.js             # Cart page operations
 │   └── utils/
 │       └── cart-manager.js # Centralized Cart & LocalStorage logic
-└── styles/
-    └── pages/              # Custom CSS for specific layouts
-        ├── main.css
-        ├── product-detail.css
-        └── cart.css
+├── styles/
+│   └── pages/              # Custom CSS for specific layouts
+│       ├── main.css
+│       ├── product-detail.css
+│       └── cart.css
+└── assets/
+    ├── icons/
+    └── images/
 ```
 
 ---
