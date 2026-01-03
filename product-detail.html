@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/pages/product-detail.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Havic HV G-92 Gamepad - Exclusive Store</title>
+</head>
+<body class="bg-white">
+
+<!-- ================= Top Announcement ================= -->
+<div class="bg-black text-white flex items-center justify-between pl-[75%] md:pl-[10%] md:pr-[10%] lg:pl-[20%] xl:pl-[30%]">
+  <div class="py-2 text-xs lg:py-3 lg:text-sm lg:tracking-wide hidden md:flex items-center justify-center">
+    <div class="flex items-center gap-3">
+      <span>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</span>
+      <a href="#" class="underline font-semibold hover:text-red-500 ease-in-out duration-300">ShopNow</a>
+    </div>
+  </div>
+  <div class="flex items-center gap-2">
+    <a href="#" class="hover:text-red-500 font-semibold text-sm ease-in-out duration-300">English</a>
+    <a href="#">
+      <img src="assets/icons/DropDown.png" class="w-6 h-6 ease-in-out duration-300 hover:rotate-180" alt="DropDown" />
+    </a>
+  </div>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="border-b border-gray-200 bg-white sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between gap-4">
+
+    <!-- Logo -->
+    <a href="main.html" class="text-2xl font-bold tracking-tight shrink-0">Exclusive</a>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex items-center gap-8 text-base font-medium">
+      <a href="main.html" class="hover:underline decoration-2 underline-offset-4 hover:text-black transition">Home</a>
+      <a href="#" class="hover:underline decoration-2 underline-offset-4 hover:text-black transition">Contact</a>
+      <a href="#" class="hover:underline decoration-2 underline-offset-4 hover:text-black transition">About</a>
+      <a href="#" class="hover:underline decoration-2 underline-offset-4 hover:text-black transition border-b-2 border-transparent">Sign Up</a>
+    </nav>
+
+    <!-- Search and Cart -->
+    <div class="flex items-center gap-4 lg:gap-6">
+      
+      <!-- Search -->
+      <div class="hidden lg:flex items-center bg-[#f5f5f5] rounded py-2 px-3 gap-3 w-64 border border-transparent focus-within:border-gray-300 transition">
+        <input 
+          type="text" 
+          placeholder="What are you looking for?" 
+          class="bg-transparent text-sm w-full focus:outline-none placeholder:text-gray-500" />
+        <button class="hover:text-red-500 transition">
+          <i class="fa-solid fa-magnifying-glass text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Wishlist and Cart -->
+      <div class="flex items-center gap-4">
+        <a href="#" class="relative hover:text-red-500 transition group">
+          <i class="fa-regular fa-heart text-2xl"></i>
+          <span class="absolute -top-1 -right-1 bg-[#db4444] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center group-hover:scale-110 transition">4</span>
+        </a>
+
+        <!-- Cart -->
+        <a href="cart.html" class="relative hover:text-red-500 transition group">
+          <i class="fa-solid fa-cart-shopping text-2xl"></i>
+          <span id="cart-count" class="absolute -top-1 -right-1 bg-[#db4444] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center group-hover:scale-110 transition">0</span>
+        </a>
+
+        <!-- User -->
+        <div class="relative group cursor-pointer">
+           <button class="w-8 h-8 rounded-full bg-transparent flex items-center justify-center hover:bg-red-500 hover:text-white transition">
+             <i class="fa-regular fa-user text-xl"></i>
+           </button>
+           
+           <!-- Dropdown -->
+           <div class="absolute right-0 top-full mt-2 w-56 bg-white/80 backdrop-blur-md border rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+             <ul class="py-2 text-sm font-medium">
+               <li class="px-4 py-2 hover:bg-gray-100 flex items-center gap-3"><i class="fa-regular fa-user"></i> Manage My Account</li>
+               <li class="px-4 py-2 hover:bg-gray-100 flex items-center gap-3"><i class="fa-solid fa-box"></i> My Order</li>
+               <li class="px-4 py-2 hover:bg-gray-100 flex items-center gap-3"><i class="fa-solid fa-circle-xmark"></i> My Cancellations</li>
+               <li class="px-4 py-2 hover:bg-gray-100 flex items-center gap-3"><i class="fa-regular fa-star"></i> My Reviews</li>
+               <li class="px-4 py-2 hover:bg-gray-100 flex items-center gap-3"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</li>
+             </ul>
+           </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <button class="block md:hidden text-2xl hover:text-red-500 transition">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= PRODUCT DETAILS ================= -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  
+  <!-- Breadcrumb -->
+  <nav class="flex text-sm text-gray-500 mb-10">
+    <a href="main.html" class="hover:underline">Account</a>
+    <span class="mx-2">/</span>
+    <a href="#" class="hover:underline">Gaming</a>
+    <span class="mx-2">/</span>
+    <span class="js-product-name-breadcrumb text-black font-medium">Havic HV G-92 Gamepad</span>
+  </nav>
+
+  <!-- Main Product -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+    
+    <!-- Product Images -->
+    <div class="lg:col-span-7 flex flex-col-reverse md:flex-row gap-4">
+
+      <!-- Product Thumbnails -->
+      <div class="flex md:flex-col gap-4 overflow-x-auto md:overflow-y-visible">
+        <div class="js-thumb-img w-32 h-28 bg-gray-100 flex items-center justify-center p-4 cursor-pointer border-2 border-transparent hover:border-gray-400 rounded">
+          <img src="assets/images/image57.png" alt="Thumb" class="max-h-full object-contain">
+        </div>
+
+        <div class="js-thumb-img w-32 h-28 bg-gray-100 flex items-center justify-center p-4 cursor-pointer border-2 border-transparent hover:border-gray-400 rounded">
+          <img src="assets/images/image58.png" alt="Thumb" class="max-h-full object-contain brightness-75">
+        </div>
+
+        <div class="js-thumb-img w-32 h-28 bg-gray-100 flex items-center justify-center p-4 cursor-pointer border-2 border-transparent hover:border-gray-400 rounded">
+          <img src="assets/images/image61.png" alt="Thumb" class="max-h-full object-contain rotate-45">
+        </div>
+
+        <div class="js-thumb-img w-32 h-28 bg-gray-100 flex items-center justify-center p-4 cursor-pointer border-2 border-transparent hover:border-gray-400 rounded">
+          <img src="assets/images/image59.png" alt="Thumb" class="max-h-full object-contain -rotate-45">
+        </div>
+      </div>
+
+      <!-- Product Image -->
+      <div class="flex-1 bg-gray-100 rounded flex items-center justify-center p-10">
+        <img id="main-product-img" src="assets/images/image63.png" alt="Havic Gamepad" class="w-full max-h-[400px] object-contain">
+      </div>
+    </div>
+
+    <!-- Product Details -->
+    <div class="lg:col-span-5 flex flex-col">
+
+      <!-- Product Name -->
+      <a href="#" class="js-product-name-title text-2xl font-semibold tracking-wide mb-2">Havic HV G-92 Gamepad</a>
+      
+      <!-- Product Rating -->
+      <div class="flex items-center gap-3 mb-4">
+        <div class="flex text-yellow-400 text-sm">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star text-gray-300"></i>
+        </div>
+        <span class="text-gray-400 text-sm">(150 Reviews)</span>
+        <span class="text-gray-300">|</span>
+        <span class="text-green-500 text-sm">In Stock</span>
+      </div>
+
+      <!-- Product Price -->
+      <div class="js-product-price text-2xl font-medium mb-4">$192.00</div>
+
+      <!-- Product Description -->
+      <p class="text-sm leading-relaxed mb-6 border-b pb-6 text-gray-700">
+        PlayStation 5 Controller Experience; built-in microphone and headset jack. Immerse yourself in the action with the integrated speaker and motion sensor.
+      </p>
+
+      <!-- Product Colors Swatch -->
+      <div class="flex items-center gap-4 mb-6">
+        <span class="text-xl mr-2">Colours:</span>
+        <button class="js-color-btn w-5 h-5 rounded-full bg-blue-300 ring-1 ring-offset-2 ring-black"></button>
+        <button class="js-color-btn w-5 h-5 rounded-full bg-red-400 ring-1 ring-offset-2 ring-transparent hover:ring-black"></button>
+      </div>
+
+      <!-- Product Sizes -->
+      <div class="flex items-center gap-4 mb-8">
+        <span class="text-xl mr-2">Size:</span>
+        <div class="flex gap-3">
+          <button class="js-size-btn border rounded px-2 py-1 w-10 text-sm font-medium hover:bg-red-500 hover:text-white transition">XS</button>
+          <button class="js-size-btn border rounded px-2 py-1 w-10 text-sm font-medium hover:bg-red-500 hover:text-white transition">S</button>
+          <button class="js-size-btn border rounded px-2 py-1 w-10 text-sm font-medium bg-red-500 text-white border-red-500">M</button>
+          <button class="js-size-btn border rounded px-2 py-1 w-10 text-sm font-medium hover:bg-red-500 hover:text-white transition">L</button>
+          <button class="js-size-btn border rounded px-2 py-1 w-10 text-sm font-medium hover:bg-red-500 hover:text-white transition">XL</button>
+        </div>
+      </div>
+
+      <!-- Product Quantity -->
+      <div class="flex items-center gap-4 mb-10">
+        <div class="flex border rounded overflow-hidden">
+          <button id="qty-minus" class="px-4 py-2 border-r hover:bg-red-500 hover:text-white transition"><i class="fa-solid fa-minus"></i></button>
+          <input id="qty-input" type="number" value="1" class="w-16 text-center focus:outline-none font-medium" readonly />
+          <button id="qty-plus" class="px-4 py-2 border-l hover:bg-red-500 hover:text-white transition"><i class="fa-solid fa-plus"></i></button>
+        </div>
+
+        <button id="buy-now-btn" class="bg-[#db4444] text-white px-10 py-2.5 rounded font-medium hover:bg-red-600 transition flex-grow sm:flex-grow-0">
+          Buy Now
+        </button>
+
+        <button class="border rounded p-2.5 w-11 h-11 flex items-center justify-center hover:bg-red-500 hover:text-white hover:border-red-500 transition">
+          <i class="fa-regular fa-heart text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Delivery & Returns -->
+      <div class="border rounded divide-y">
+        <div class="flex items-center gap-4 p-4">
+          <i class="fa-solid fa-truck-fast text-2xl"></i>
+          <div>
+            <div class="font-medium">Free Delivery</div>
+            <p class="text-xs underline cursor-pointer">Enter your postal code for Delivery Availability</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 p-4">
+          <i class="fa-solid fa-arrows-rotate text-2xl"></i>
+          <div>
+            <div class="font-medium">Return Delivery</div>
+            <p class="text-xs">Free 30 Days Delivery Returns. <span class="underline cursor-pointer">Details</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ================= RELATED PRODUCTS ================ -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+  
+  <!-- Section Header -->
+  <div class="flex items-center gap-4 mb-10">
+    <div class="w-5 h-10 bg-[#db4444] rounded-sm"></div>
+    <span class="text-[#db4444] font-semibold">Related Item</span>
+  </div>
+
+  <!-- Products -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    
+    <!-- Product Card -->
+    <div class="group js-product-card">
+
+      <!-- Product Image -->
+      <div class="relative bg-[#f5f5f5] rounded-sm h-[250px] flex items-center justify-center overflow-hidden">
+        <span class="absolute top-3 left-3 bg-[#db4444] text-white text-xs px-3 py-1 rounded-sm">-40%</span>
+
+        <div class="absolute top-3 right-3 flex flex-col gap-2">
+          <button class="bg-white p-2 rounded-full hover:bg-[#db4444] hover:text-white transition"><i class="fa-regular fa-heart"></i></button>
+          <button class="bg-white p-2 rounded-full hover:bg-[#db4444] hover:text-white transition"><i class="fa-regular fa-eye"></i></button>
+        </div>
+
+        <img src="assets/images/Frame-610.png" alt="CPU Cooler" class="product-img w-40" />
+
+        <button class="js-add-to-cart absolute bottom-0 w-full bg-black text-white py-2 opacity-0 group-hover:opacity-100 transition-all duration-300">Add To Cart</button>
+      </div>
+
+      <!-- Product Info -->
+      <div class="mt-4">
+        <a href="#" class="js-product-name font-medium text-base mb-2 hover:underline">RGB liquid CPU Cooler</a>
+
+        <div class="flex gap-3 mb-2">
+          <span class="js-price-value text-[#db4444] font-medium">$160</span>
+          <span class="text-gray-400 line-through">$170</span>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <div class="flex text-yellow-400 text-sm">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+
+          <span class="text-gray-400 text-xs font-semibold">(65)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Card -->
+    <div class="group js-product-card">
+
+      <!-- Product Image -->
+      <div class="relative bg-[#f5f5f5] rounded-sm h-[250px] flex items-center justify-center overflow-hidden">
+        <div class="absolute top-3 right-3 flex flex-col gap-2">
+          <button class="bg-white p-2 rounded-full hover:bg-[#db4444] hover:text-white transition"><i class="fa-regular fa-heart"></i></button>
+          <button class="bg-white p-2 rounded-full hover:bg-[#db4444] hover:text-white transition"><i class="fa-regular fa-eye"></i></button>
+        </div>
+
+        <img src="assets/images/g92-2-500x500 1.png" alt="Gamepad" class="product-img w-40" />
+
+        <button class="js-add-to-cart absolute bottom-0 w-full bg-black text-white py-2 opacity-0 group-hover:opacity-100 transition-all duration-300">Add To Cart</button>
+      </div>
+
+      <!-- Product Info -->
+      <div class="mt-4">
+        <a href="#" class="js-product-name font-medium text-base mb-2 hover:underline">GP11 Gamepad</a>
+
+        <div class="flex gap-3 mb-2">
+          <span class="js-price-value text-[#db4444] font-medium">$650</span>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <div class="flex text-yellow-400 text-sm">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star text-gray-300"></i>
+          </div>
+
+          <span class="text-gray-400 text-xs font-semibold">(95)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Card -->
+    <div class="group js-product-card">
+
+      <!-- Product Image -->
+      <div class="relative bg-[#f5f5f5] rounded-sm h-[250px] flex items-center justify-center overflow-hidden">
+        <span class="absolute top-3 left-3 bg-[#db4444] text-white text-xs px-3 py-1 rounded-sm">-35%</span>
+
+        <div class="absolute top-3 right-3 flex flex-col gap-2">
+          <button class="bg-white p-2 rounded-full hover:bg-[#db4444] hover:text-white transition"><i class="fa-regular fa-heart"></i></button>
+          <button class="bg-white p-2 rounded-full hover:bg-[#db4444] hover:text-white transition"><i class="fa-regular fa-eye"></i></button>
+        </div>
+
+        <img src="assets/images/ak-900-01-500x500.png" alt="Keyboard" class="product-img w-44" />
+
+        <button class="js-add-to-cart absolute bottom-0 w-full bg-black text-white py-2 opacity-0 group-hover:opacity-100 transition-all duration-300">Add To Cart</button>
+      </div>
+
+      <!-- Product Info -->
+      <div class="mt-4">
+        <a href="#" class="js-product-name font-medium text-base mb-2 hover:underline">AK-900 Wired Keyboard</a>
+
+        <div class="flex gap-3 mb-2">
+          <span class="js-price-value text-[#db4444] font-medium">$960</span>
+          <span class="text-gray-400 line-through">$1160</span>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <div class="flex text-yellow-400 text-sm">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star text-gray-300"></i>
+          </div>
+
+          <span class="text-gray-400 text-xs font-semibold">(75)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Card -->
+    <div class="group js-product-card">
+
+      <!-- Product Image -->
+      <div class="relative bg-[#f5f5f5] rounded-sm h-[250px] flex items-center justify-center overflow-hidden">
+        <div class="absolute top-3 right-3 flex flex-col gap-2">
+          <button class="bg-white p-2 rounded-full hover:bg-[#db4444] hover:text-white transition"><i class="fa-regular fa-heart"></i></button>
+          <button class="bg-white p-2 rounded-full hover:bg-[#db4444] hover:text-white transition"><i class="fa-regular fa-eye"></i></button>
+        </div>
+
+        <img src="assets/images/g27cq4-500x500 1.png" alt="Monitor" class="product-img w-40" />
+
+        <button class="js-add-to-cart absolute bottom-0 w-full bg-black text-white py-2 opacity-0 group-hover:opacity-100 transition-all duration-300">Add To Cart</button>
+      </div>
+
+      <!-- Product Info -->
+      <div class="mt-4">
+        <a href="#" class="js-product-name font-medium text-base mb-2 hover:underline">IPS LCD Gaming Monitor</a>
+
+        <div class="flex gap-3 mb-2">
+          <span class="js-price-value text-[#db4444] font-medium">$370</span>
+          <span class="text-gray-400 line-through">$400</span>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <div class="flex text-yellow-400 text-sm">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+
+          <span class="text-gray-400 text-xs font-semibold">(99)</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================ -->
+<footer class="bg-black text-white pt-20 pb-6">
+  <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      
+    <!-- Subscribe -->
+    <div>
+      <h2 class="text-2xl font-bold mb-6">Exclusive</h2>
+      <h3 class="text-xl font-medium mb-6">Subscribe</h3>
+      <p class="mb-4 font-light">Get 10% off your first order</p>
+      <div class="relative max-w-[220px]">
+        <input type="email" placeholder="Enter your email" class="bg-transparent border border-white rounded py-3 px-4 w-full pr-10 text-sm focus:outline-none">
+        <button class="absolute right-3 top-1/2 -translate-y-1/2">
+          <i class="fa-regular fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Support -->
+    <div>
+      <h3 class="text-xl font-medium mb-6">Support</h3>
+      <ul class="space-y-4 font-light text-sm">
+        <li class="leading-relaxed">111 Bijoy sarani, Dhaka,<br> DH 1515, Bangladesh.</li>
+        <li>exclusive@gmail.com</li>
+        <li>+88015-88888-9999</li>
+      </ul>
+    </div>
+
+    <!-- Account -->
+    <div>
+      <h3 class="text-xl font-medium mb-6">Account</h3>
+      <ul class="space-y-4 font-light text-sm">
+        <li><a href="#" class="hover:underline">My Account</a></li>
+        <li><a href="#" class="hover:underline">Login / Register</a></li>
+        <li><a href="#" class="hover:underline">Cart</a></li>
+        <li><a href="#" class="hover:underline">Wishlist</a></li>
+        <li><a href="#" class="hover:underline">Shop</a></li>
+      </ul>
+    </div>
+
+    <!-- Quick Link -->
+    <div>
+      <h3 class="text-xl font-medium mb-6">Quick Link</h3>
+      <ul class="space-y-4 font-light text-sm">
+        <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+        <li><a href="#" class="hover:underline">Terms Of Use</a></li>
+        <li><a href="#" class="hover:underline">FAQ</a></li>
+        <li><a href="#" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Download App -->
+    <div>
+      <h3 class="text-xl font-medium mb-6">Download App</h3>
+      <p class="text-xs text-gray-400 mb-4">Save $3 with App New User Only</p>
+      <div class="flex gap-2 mb-6">
+        <div class="bg-white p-1 w-20 h-20">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example" alt="QR Code">
+        </div>
+        <div class="flex flex-col gap-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="w-28 h-auto cursor-pointer">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" class="w-28 h-auto cursor-pointer border border-gray-400 rounded-sm">
+        </div>
+      </div>
+      <div class="flex gap-6 text-xl">
+        <a href="#" class="hover:text-gray-400"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-gray-400"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="hover:text-gray-400"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="hover:text-gray-400"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="mt-16 pt-4 border-t border-white/10 text-center">
+    <p class="text-gray-600 text-sm">
+      <i class="fa-regular fa-copyright"></i> Copyright amiropale 2025. All right reserved
+    </p>
+  </div>
+</footer>
+
+<script type="module" src="scripts/detail.js"></script>
+</body>
+</html>

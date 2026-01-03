@@ -1,0 +1,25 @@
+body {
+  font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+.product-img {
+  height: 150px;
+  object-fit: contain;
+}
+
+.js-category {
+  background-color: white;
+  border-color: #d1d5db;
+  color: #1f2937;
+}
+
+.js-category.is-active {
+  background-color: #ef4444;
+  border-color: #ef4444;
+  color: white;
+}
+
+.icon-circle {
+  background: #2f2e30;
+  border: 8px solid #c1c1c1;
+}

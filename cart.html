@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/pages/cart.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Products Cart - Exclusive Store</title>
+</head>
+<body class="bg-white">
+
+<!-- ================= Top Announcement ================= -->
+<div class="bg-black text-white flex items-center justify-between pl-[75%] md:pl-[10%] md:pr-[10%] lg:pl-[20%] xl:pl-[30%]">
+  <div class="py-2 text-xs lg:py-3 lg:text-sm lg:tracking-wide hidden md:flex items-center justify-center">
+    <div class="flex items-center gap-3">
+      <span>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</span>
+      <a href="#" class="underline font-semibold hover:text-red-500 ease-in-out duration-300">ShopNow</a>
+    </div>
+  </div>
+  <div class="flex items-center gap-2">
+    <a href="#" class="hover:text-red-500 font-semibold text-sm ease-in-out duration-300">English</a>
+    <a href="#">
+      <img src="assets/icons/DropDown.png" class="w-6 h-6 ease-in-out duration-300 hover:rotate-180" alt="DropDown" />
+    </a>
+  </div>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="border-b border-gray-200 bg-white sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between gap-4">
+    
+    <!-- Logo -->
+    <a href="main.html" class="text-2xl font-bold tracking-tight shrink-0">Exclusive</a>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex items-center gap-8 text-base font-medium">
+      <a href="main.html" class="hover:underline decoration-2 underline-offset-4 hover:text-black transition">Home</a>
+      <a href="#" class="hover:underline decoration-2 underline-offset-4 hover:text-black transition">Contact</a>
+      <a href="#" class="hover:underline decoration-2 underline-offset-4 hover:text-black transition">About</a>
+      <a href="#" class="hover:underline decoration-2 underline-offset-4 hover:text-black transition border-b-2 border-transparent">Sign Up</a>
+    </nav>
+
+    <!-- Search and Cart -->
+    <div class="flex items-center gap-4 lg:gap-6">
+      
+      <!-- Search -->
+      <div class="hidden lg:flex items-center bg-[#f5f5f5] rounded py-2 px-3 gap-3 w-64 border border-transparent focus-within:border-gray-300 transition">
+        <input 
+          type="text" 
+          placeholder="What are you looking for?" 
+          class="bg-transparent text-sm w-full focus:outline-none placeholder:text-gray-500" />
+        <button class="hover:text-red-500 transition">
+          <i class="fa-solid fa-magnifying-glass text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Wishlist and Cart -->
+      <div class="flex items-center gap-4">
+        <a href="#" class="relative hover:text-red-500 transition group">
+          <i class="fa-regular fa-heart text-2xl"></i>
+          <span class="absolute -top-1 -right-1 bg-[#db4444] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center group-hover:scale-110 transition">4</span>
+        </a>
+
+        <!-- Cart -->
+        <a href="cart.html" class="relative hover:text-red-500 transition group">
+          <i class="fa-solid fa-cart-shopping text-2xl"></i>
+          <span id="cart-count" class="absolute -top-1 -right-1 bg-[#db4444] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center group-hover:scale-110 transition">0</span>
+        </a>
+
+        <!-- User -->
+        <div class="relative group cursor-pointer">
+           <button class="w-8 h-8 rounded-full bg-transparent flex items-center justify-center hover:bg-red-500 hover:text-white transition">
+             <i class="fa-regular fa-user text-xl"></i>
+           </button>
+           
+           <!-- Dropdown -->
+           <div class="absolute right-0 top-full mt-2 w-56 bg-white/80 backdrop-blur-md border rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+             <ul class="py-2 text-sm font-medium">
+               <li class="px-4 py-2 hover:bg-gray-100 flex items-center gap-3"><i class="fa-regular fa-user"></i> Manage My Account</li>
+               <li class="px-4 py-2 hover:bg-gray-100 flex items-center gap-3"><i class="fa-solid fa-box"></i> My Order</li>
+               <li class="px-4 py-2 hover:bg-gray-100 flex items-center gap-3"><i class="fa-solid fa-circle-xmark"></i> My Cancellations</li>
+               <li class="px-4 py-2 hover:bg-gray-100 flex items-center gap-3"><i class="fa-regular fa-star"></i> My Reviews</li>
+               <li class="px-4 py-2 hover:bg-gray-100 flex items-center gap-3"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</li>
+             </ul>
+           </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <button class="block md:hidden text-2xl hover:text-red-500 transition">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= CART ================ -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+  
+  <!-- Breadcrumb -->
+  <nav class="flex text-sm text-gray-500 mb-20">
+    <a href="main.html" class="hover:text-black">Home</a>
+    <span class="mx-2">/</span>
+    <span class="text-black">Cart</span>
+  </nav>
+
+  <!-- Cart Items -->
+  <div class="overflow-x-auto mb-6">
+    <table class="w-full text-left border-separate border-spacing-y-8">
+      <thead>
+        <tr class="bg-white shadow-sm rounded-sm">
+          <th class="py-6 px-10 font-medium">Product</th>
+          <th class="py-6 px-10 font-medium">Price</th>
+          <th class="py-6 px-10 font-medium">Quantity</th>
+          <th class="py-6 px-10 font-medium text-right">Subtotal</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items">
+        <tr class="bg-white shadow-sm rounded-sm js-cart-row">
+          <td class="py-6 px-10">
+            <div class="flex items-center gap-4 relative group">
+              <div class="relative w-14 h-14 bg-[#f5f5f5] flex items-center justify-center rounded p-2">
+                <img src="assets/images/g92-2-500x500 1.png" alt="Gamepad" class="object-contain">
+                <button class="js-remove-item absolute -top-2 -left-2 bg-[#db4444] text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+              <span class="text-sm font-medium">LCD Monitor</span>
+            </div>
+          </td>
+          <td class="py-6 px-10 font-medium">$650</td>
+          <td class="py-6 px-10">
+            <input type="number" value="01" min="1" class="w-16 border border-gray-300 rounded px-2 py-2 text-center outline-none focus:border-black js-quantity-input">
+          </td>
+          <td class="py-6 px-10 font-medium text-right">$650</td>
+        </tr>
+
+        <tr class="bg-white shadow-sm rounded-sm js-cart-row">
+          <td class="py-6 px-10">
+            <div class="flex items-center gap-4 relative group">
+              <div class="relative w-14 h-14 bg-[#f5f5f5] flex items-center justify-center rounded p-2">
+                <img src="assets/images/GP11_PRD3.png" alt="Gamepad" class="object-contain">
+                <button class="js-remove-item absolute -top-2 -left-2 bg-[#db4444] text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+              <span class="text-sm font-medium">H1 Gamepad</span>
+            </div>
+          </td>
+          <td class="py-6 px-10 font-medium">$550</td>
+          <td class="py-6 px-10">
+            <input type="number" value="02" min="1" class="w-16 border border-gray-300 rounded px-2 py-2 text-center outline-none focus:border-black js-quantity-input">
+          </td>
+          <td class="py-6 px-10 font-medium text-right">$1100</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Cart Actions -->
+  <div class="flex justify-between items-center mb-20">
+    <a href="main.html" class="border border-black px-12 py-4 rounded font-medium hover:bg-black hover:text-white transition">Return To Shop</a>
+    <button id="update-cart-btn" class="border border-black px-12 py-4 rounded font-medium hover:bg-black hover:text-white transition">Update Cart</button>
+  </div>
+
+  <!-- Cart Summary -->
+  <div class="flex flex-col lg:flex-row justify-between gap-10">
+
+    <!-- Coupon Code -->
+    <div class="flex items-start gap-4">
+      <input type="text" placeholder="Coupon Code" class="border border-black rounded px-6 py-4 w-64 outline-none focus:ring-1 focus:ring-black">
+      <button class="bg-[#db4444] text-white px-12 py-4 rounded font-medium hover:bg-red-600 transition">Apply Coupon</button>
+    </div>
+
+    <!-- Cart Total -->
+    <div class="border-2 border-black rounded p-8 w-full lg:w-[470px]">
+      <h3 class="text-xl font-medium mb-6">Cart Total</h3>
+      
+      <div class="flex justify-between pb-4 border-b border-gray-300 mb-4">
+        <span>Subtotal:</span>
+        <span class="js-cart-subtotal font-medium">$1750</span>
+      </div>
+      
+      <div class="flex justify-between pb-4 border-b border-gray-300 mb-4">
+        <span>Shipping:</span>
+        <span class="font-medium text-gray-500 uppercase">Free</span>
+      </div>
+      
+      <div class="flex justify-between mb-8">
+        <span>Total:</span>
+        <span class="js-cart-total font-medium text-lg">$1750</span>
+      </div>
+
+      <div class="text-center">
+        <a href="#" class="bg-[#db4444] text-white px-12 py-4 rounded font-medium hover:bg-red-600 transition inline-block w-full">Process to Checkout</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================ -->
+<footer class="bg-black text-white pt-20 pb-6">
+  <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      
+    <!-- Subscribe -->
+    <div>
+      <h2 class="text-2xl font-bold mb-6">Exclusive</h2>
+      <h3 class="text-xl font-medium mb-6">Subscribe</h3>
+      <p class="mb-4 font-light">Get 10% off your first order</p>
+      <div class="relative max-w-[220px]">
+        <input type="email" placeholder="Enter your email" class="bg-transparent border border-white rounded py-3 px-4 w-full pr-10 text-sm focus:outline-none">
+        <button class="absolute right-3 top-1/2 -translate-y-1/2">
+          <i class="fa-regular fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Support -->
+    <div>
+      <h3 class="text-xl font-medium mb-6">Support</h3>
+      <ul class="space-y-4 font-light text-sm">
+        <li class="leading-relaxed">111 Bijoy sarani, Dhaka,<br> DH 1515, Bangladesh.</li>
+        <li>exclusive@gmail.com</li>
+        <li>+88015-88888-9999</li>
+      </ul>
+    </div>
+
+    <!-- Account -->
+    <div>
+      <h3 class="text-xl font-medium mb-6">Account</h3>
+      <ul class="space-y-4 font-light text-sm">
+        <li><a href="#" class="hover:underline">My Account</a></li>
+        <li><a href="#" class="hover:underline">Login / Register</a></li>
+        <li><a href="#" class="hover:underline">Cart</a></li>
+        <li><a href="#" class="hover:underline">Wishlist</a></li>
+        <li><a href="#" class="hover:underline">Shop</a></li>
+      </ul>
+    </div>
+
+    <!-- Quick Link -->
+    <div>
+      <h3 class="text-xl font-medium mb-6">Quick Link</h3>
+      <ul class="space-y-4 font-light text-sm">
+        <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+        <li><a href="#" class="hover:underline">Terms Of Use</a></li>
+        <li><a href="#" class="hover:underline">FAQ</a></li>
+        <li><a href="#" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Download App -->
+    <div>
+      <h3 class="text-xl font-medium mb-6">Download App</h3>
+      <p class="text-xs text-gray-400 mb-4">Save $3 with App New User Only</p>
+      <div class="flex gap-2 mb-6">
+        <div class="bg-white p-1 w-20 h-20">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example" alt="QR Code">
+        </div>
+        <div class="flex flex-col gap-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="w-28 h-auto cursor-pointer">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" class="w-28 h-auto cursor-pointer border border-gray-400 rounded-sm">
+        </div>
+      </div>
+      <div class="flex gap-6 text-xl">
+        <a href="#" class="hover:text-gray-400"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-gray-400"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="hover:text-gray-400"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="hover:text-gray-400"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="mt-16 pt-4 border-t border-white/10 text-center">
+    <p class="text-gray-600 text-sm">
+      <i class="fa-regular fa-copyright"></i> Copyright amiropale 2025. All right reserved
+    </p>
+  </div>
+</footer>
+
+<script type="module" src="scripts/cart.js"></script>
+</body>
+</html>
