@@ -1,6 +1,6 @@
 # Exclusive Store - E-Commerce Frontend
 
-A modern, responsive e-commerce web application developed as a final project for a Frontend Development course. This project simulates a real-world shopping experience, focusing on clean UI/UX and dynamic data handling without a backend. **This project is now based on Vanilla JS and soon will be migrated to React JS base and other extra featurs.**
+A modern, responsive e-commerce web application developed as a final project for a Frontend Development course. This project simulates a real-world shopping experience, focusing on clean UI/UX and dynamic data handling without a backend. **This project is now based on Vanilla JS and soon will be migrated to React JS base and other extra features.**
 
 ## Features
 
@@ -23,7 +23,7 @@ A modern, responsive e-commerce web application developed as a final project for
 ## Project Structure
 
 ```exclusive-store-final-project/
-├── index.html              # Main landing page
+├── main.html              # Main landing page
 ├── product-detail.html     # Dynamic product information page
 ├── cart.html               # Shopping cart overview
 ├── scripts/
