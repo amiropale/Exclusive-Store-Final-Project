@@ -67,4 +67,4 @@ This project is for **educational purposes only** and is free to use or modify f
 
 ## Author
 
-Amir Malek - [Your GitHub Profile](https://github.com/amiropale/)
+Amir Malek - [My LinkedIn Profile](https://www.linkedin.com/in/amiropale/)
